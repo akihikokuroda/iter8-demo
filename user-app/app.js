@@ -2,11 +2,13 @@ module.exports = (/*options*/) => {
   // Use options.server to access http.Server. Example with socket.io:
   //     const io = require('socket.io')(options.server)
   const app = require('express')()
+  const sleep = require('sleep')
 
   app.get('/', (req, res) => {
     // Use req.log (a `pino` instance) to log JSON:
     req.log.info({message: 'Hello from Appsody!'});
-    res.send('Hello! I reply before I think.');
+    sleep.sleep(5)
+    res.send('Hello! I\'m thinking a little bit.');
   });
 
   return app;
