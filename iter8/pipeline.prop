@@ -1,0 +1,5 @@
+app-host: localhost
+app-port: 80
+app-path: /
+load-duration: 600
+load-frequency: 0.1
