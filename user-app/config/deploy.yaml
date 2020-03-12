@@ -18,6 +18,7 @@ metadata:
   name: demo-$VER
   labels:
     app: demo
+    version: $VER
 spec:
   selector:
     matchLabels:
@@ -26,6 +27,7 @@ spec:
     metadata:
       labels:
         app: demo
+        version: $VER
     spec:
       containers:
       - name: demo
