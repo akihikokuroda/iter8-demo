@@ -7,8 +7,8 @@ module.exports = (/*options*/) => {
   app.get('/', (req, res) => {
     // Use req.log (a `pino` instance) to log JSON:
     req.log.info({message: 'Hello from Appsody!'});
-    sleep.sleep(10)
-    res.send('Hello! I\'m thinking 10 seconds!!');
+    sleep.sleep(5)
+    res.send('Hello! I\'m thinking 5 seconds!!');
   });
 
   return app;
